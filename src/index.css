@@ -1,7 +1,10 @@
 :root {
   --color-primary: #ff6060;
+  --color-bright: #ffffff;
+  --color-foundation: #F7F7F7;
   --large-radius: 25px;
   --normal-radius: 10px;
+  --small-radius: 5px;
 }
 
 * {

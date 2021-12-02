@@ -1,0 +1,41 @@
+.collapse {
+  .trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-primary);
+    border: none;
+    height: 47px;
+    border-radius: var(--small-radius);
+    color: var(--color-bright);
+    font-size: 1.5rem;
+    padding: 0 18px;
+    cursor: pointer;
+
+    .chevron {
+      transition: transform 0.3s;
+
+      &.down {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: var(--color-foundation);
+    font-size: 1.5rem;
+    border-radius: 0 0 var(--small-radius) var(--small-radius);
+    transition: max-height 0.3s;
+
+    .wrapper {
+      margin: 25px 18px;
+    }
+
+    &.opened {
+      max-height: 1500px;
+    }
+  }
+}

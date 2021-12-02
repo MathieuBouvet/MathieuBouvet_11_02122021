@@ -9,7 +9,7 @@
   display: flex;
   align-items: flex-end;
   position: relative;
-  background-color: #ffffff;
+  background-color: var(--color-bright);
   overflow: hidden;
   cursor: pointer;
   text-decoration: none;
@@ -39,7 +39,7 @@
   }
 
   .title {
-    color: #ffffff;
+    color: var(--color-bright);
     margin: 25px;
     position: relative;
     font-size: 1.1em;
