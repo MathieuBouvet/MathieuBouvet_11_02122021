@@ -1,0 +1,47 @@
+.accomodationCard {
+  --card-size: 340px;
+  --blur-offset: 30px;
+
+  width: var(--card-size);
+  height: var(--card-size);
+  background-size: cover;
+  border-radius: var(--normal-radius);
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(255, 255, 255, 0) 65%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-position: 0 0;
+    background-size: 100% calc(var(--card-size) + var(--blur-offset));
+    transition: background-position 0.3s;
+  }
+
+  &:hover {
+    &::before {
+      background-position: 0 calc(-1 * var(--blur-offset));
+    }
+  }
+
+  .title {
+    color: #ffffff;
+    margin: 25px;
+    position: relative;
+    font-size: 1.1em;
+  }
+}

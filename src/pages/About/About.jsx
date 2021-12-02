@@ -1,13 +1,13 @@
 import React from "react";
 
-import Title from "../../components/Title";
+import Hero from "../../components/Hero";
 
 class About extends React.Component {
   render() {
     return (
-      <div>
-        <Title background="./images/background-about.jpg"></Title>
-      </div>
+      <>
+        <Hero background="./images/background-about.jpg"></Hero>
+      </>
     );
   }
 }

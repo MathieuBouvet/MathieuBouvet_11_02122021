@@ -1,0 +1,14 @@
+.accomodationContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 50px;
+  background-color: #f7f7f7;
+  border-radius: var(--large-radius);
+  margin-top: 45px;
+  justify-content: space-evenly;
+
+  & > *:last-child {
+    margin-right: auto;
+  }
+}
