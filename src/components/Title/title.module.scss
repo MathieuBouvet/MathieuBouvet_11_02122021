@@ -1,0 +1,27 @@
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  margin: 0;
+  height: 225px;
+  color: white;
+  font-size: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.33);
+  }
+
+  .inside {
+    position: relative;
+  }
+}
