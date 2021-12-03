@@ -1,0 +1,17 @@
+.notFound {
+  text-align: center;
+
+  .errorCode {
+    font-size: 15rem;
+    font-weight: bold;
+    margin: 150px 0 0 0;
+  }
+
+  .errorMessage {
+    font-size: 2rem;
+  }
+
+  .link {
+    color: var(--color-primary);
+  }
+}

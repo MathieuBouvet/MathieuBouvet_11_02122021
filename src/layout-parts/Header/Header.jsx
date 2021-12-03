@@ -11,7 +11,7 @@ class Header extends React.Component {
     return (
       <header className={styles.header}>
         <h1>
-          <img src="./logo-full.svg" alt="kasa" />
+          <img src="/logo-full.svg" alt="kasa" />
         </h1>
         <nav>
           <ul className={styles.navigationMenu}>
