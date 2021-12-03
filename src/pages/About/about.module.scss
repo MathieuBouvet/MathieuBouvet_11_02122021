@@ -1,4 +1,12 @@
+@use "../../mixins.scss";
+
 .collpasibleMessage {
   margin: 33px 90px;
   margin-bottom: 0;
+}
+
+@include mixins.small-screens {
+  .collpasibleMessage {
+    margin: 33px 0;
+  }
 }

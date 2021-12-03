@@ -1,9 +1,8 @@
 .accomodationCard {
-  --card-size: 340px;
   --blur-offset: 30px;
 
-  width: var(--card-size);
-  height: var(--card-size);
+  width: var(--accomodation-card-width);
+  height: var(--accomodation-card-height);
   background-size: cover;
   border-radius: var(--normal-radius);
   display: flex;
@@ -28,7 +27,7 @@
       rgba(255, 255, 255, 0) 100%
     );
     background-position: 0 0;
-    background-size: 100% calc(var(--card-size) + var(--blur-offset));
+    background-size: 100% calc(var(--accomodation-card-height) + var(--blur-offset));
     transition: background-position 0.3s;
   }
 

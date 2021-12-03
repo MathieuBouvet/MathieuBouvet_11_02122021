@@ -1,14 +1,29 @@
+@use "../../mixins.scss";
+
 .accomodationContainer {
-  display: flex;
-  flex-wrap: wrap;
+  --accomodation-card-width: 340px;
+  --accomodation-card-height: 340px;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--accomodation-card-width));
   gap: 50px;
   padding: 50px;
   background-color: var(--color-foundation);
   border-radius: var(--large-radius);
   margin-top: 45px;
-  justify-content: space-evenly;
+  justify-content: center;
 
   & > *:last-child {
     margin-right: auto;
+  }
+}
+
+@include mixins.small-screens {
+  .accomodationContainer {
+    --accomodation-card-width: 100%;
+    --accomodation-card-height: calc(0.72 * calc(100vw - 100px));
+    gap: 20px;
+    padding: 20px;
   }
 }

@@ -1,7 +1,9 @@
+@use "./mixins.scss";
+
 :root {
   --color-primary: #ff6060;
   --color-bright: #ffffff;
-  --color-foundation: #F7F7F7;
+  --color-foundation: #f7f7f7;
   --large-radius: 25px;
   --normal-radius: 10px;
   --small-radius: 5px;
@@ -11,11 +13,21 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-primary);
-  font-size: 100%;
 }
+
+@include mixins.small-screens {
+  html {
+    font-size: 14px;
+  }
+}
+
