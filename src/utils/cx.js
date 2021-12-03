@@ -9,14 +9,14 @@ function objectToClassList(obj) {
 }
 
 function cx(...args) {
-  const classList = args.flatMap(arg => {
-    if (typeof arg === "object") {
-      return objectToClassList(arg);
-    }
-    return arg;
-  });
-
-  return classList.join(" ");
+  return args
+    .flatMap(arg => {
+      if (typeof arg === "object") {
+        return objectToClassList(arg);
+      }
+      return arg;
+    })
+    .join(" ");
 }
 
 export default cx;

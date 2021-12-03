@@ -26,7 +26,7 @@ class Collapse extends React.Component {
         <button className={styles.trigger} onClick={this.toggle}>
           {this.props.title}
           <img
-            src="./chevron-up.svg"
+            src="/chevron-up.svg"
             alt={`chevron vers le ${this.state.isOpened ? "bas" : "haut"}`}
             className={cx(styles.chevron, {
               [styles.down]: this.state.isOpened,

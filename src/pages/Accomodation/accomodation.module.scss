@@ -1,0 +1,79 @@
+@use "../../mixins.scss";
+
+.accomodationInfo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title host"
+    "location host"
+    "tags rating";
+
+  .title {
+    grid-area: title;
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .host {
+    grid-area: host;
+  }
+
+  .location {
+    grid-area: location;
+    margin: 0;
+    font-size: 1.15rem;
+    margin-top: 8px;
+  }
+
+  .tags {
+    grid-area: tags;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+
+    .tag {
+      border-radius: 50000px;
+      background-color: var(--color-primary);
+      color: var(--color-bright);
+      min-width: 115px;
+      padding: 5px 15px;
+      text-align: center;
+    }
+  }
+
+  .rating {
+    grid-area: rating;
+  }
+}
+
+.descriptionAndEquipements {
+  display: flex;
+  gap: 76px;
+  margin-top: 25px;
+  
+  .collapsible {
+    flex: 1 1 1px;
+  }
+
+  .equipmentList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@include mixins.small-screens {
+  .accomodationInfo {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "location location"
+      "tags tags"
+      "rating host";
+  }
+
+  .descriptionAndEquipements {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

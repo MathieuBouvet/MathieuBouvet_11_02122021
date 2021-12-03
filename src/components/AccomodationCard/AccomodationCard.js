@@ -1,18 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { Link } from "react-router-dom";
+
 import styles from "./accomodationCard.module.scss";
 
 class AccomodationCard extends React.Component {
   render() {
     return (
-      <a
+      <Link
         className={styles.accomodationCard}
         style={{ backgroundImage: `url("${this.props.cover}")` }}
-        href={`/accomodations/${this.props.id}`}
+        to={`/accomodations/${this.props.id}`}
       >
         <span className={styles.title}>{this.props.children}</span>
-      </a>
+      </Link>
     );
   }
 }
