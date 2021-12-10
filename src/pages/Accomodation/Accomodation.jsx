@@ -9,6 +9,7 @@ import { getAccomodationById } from "../../dataLayer";
 import Collapse from "../../components/Collapse";
 import Rating from "../../components/Rating/Rating";
 import Host from "../../components/Host";
+import Carousel from "../../components/Carousel";
 
 import styles from "./accomodation.module.scss";
 
@@ -20,7 +21,7 @@ class Accomodation extends React.Component {
     }
     return (
       <>
-        {/*TODO : carousel */}
+        <Carousel images={accomodation.pictures} />
         <div className={styles.accomodationInfo}>
           <h2 className={styles.title}>{accomodation.title}</h2>
           <Host
