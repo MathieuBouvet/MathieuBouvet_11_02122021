@@ -30,11 +30,13 @@ class Accomodation extends React.Component {
           />
           <p className={styles.location}>{accomodation.location}</p>
           <div className={styles.tags}>
-            {accomodation.tags.map(tag => (
-              <div className={styles.tag}>{tag}</div>
+            {accomodation.tags.map((tag, index) => (
+              <div className={styles.tag} key={index}>
+                {tag}
+              </div>
             ))}
           </div>
-          <Rating className={styles.rating}>{accomodation.rating}</Rating>
+          <Rating className={styles.rating}>{Number(accomodation.rating)}</Rating>
         </div>
         <div className={styles.descriptionAndEquipements}>
           <Collapse title="Description" className={styles.collapsible}>
@@ -42,8 +44,8 @@ class Accomodation extends React.Component {
           </Collapse>
           <Collapse title="Equipements" className={styles.collapsible}>
             <ul className={styles.equipmentList}>
-              {accomodation.equipments.map(equipement => (
-                <li>{equipement}</li>
+              {accomodation.equipments.map((equipement, index) => (
+                <li key={index}>{equipement}</li>
               ))}
             </ul>
           </Collapse>
