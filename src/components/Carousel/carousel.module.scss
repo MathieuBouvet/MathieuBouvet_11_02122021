@@ -1,13 +1,55 @@
+@use "../../mixins.scss";
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .carousel {
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
 
-  .picture {
+  .pictureContainer {
     width: 100%;
     height: 410px;
-    object-fit: cover;
+    position: relative;
     border-radius: var(--large-radius);
+    overflow: hidden;
+  }
+
+  .picture {
+    @include mixins.accomodation-picture;
+    position: absolute;
+
+    &.previous {
+      right: 100%;
+    }
+
+    &.next {
+      left: 100%;
+    }
+
+    &.slideLeft {
+      animation: slideLeft 0.5s forwards;
+    }
+    
+    &.slideRight {
+      animation: slideRight 0.5s forwards;
+    }
   }
 
   .button {
@@ -25,7 +67,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: rgba(0,0,0,0.1);
+      background-color: rgba(0, 0, 0, 0.1);
     }
   }
 

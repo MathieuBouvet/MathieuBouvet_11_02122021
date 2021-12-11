@@ -21,7 +21,15 @@ class Accomodation extends React.Component {
     }
     return (
       <>
-        <Carousel images={accomodation.pictures} />
+        {accomodation.pictures.length > 1 ? (
+          <Carousel images={accomodation.pictures} />
+        ) : (
+          <img
+            src={accomodation.pictures[0]}
+            alt=""
+            className={styles.accomodationPicture}
+          />
+        )}
         <div className={styles.accomodationInfo}>
           <h2 className={styles.title}>{accomodation.title}</h2>
           <Host
@@ -37,7 +45,9 @@ class Accomodation extends React.Component {
               </div>
             ))}
           </div>
-          <Rating className={styles.rating}>{Number(accomodation.rating)}</Rating>
+          <Rating className={styles.rating}>
+            {Number(accomodation.rating)}
+          </Rating>
         </div>
         <div className={styles.descriptionAndEquipements}>
           <Collapse title="Description" className={styles.collapsible}>
