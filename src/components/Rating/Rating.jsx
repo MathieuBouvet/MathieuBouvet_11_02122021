@@ -16,7 +16,12 @@ class Rating extends React.Component {
     return (
       <div className={cx(styles.rating, this.props.className)}>
         {starStatus.map((status, index) => (
-          <img key={index} src={`/star-${status}.svg`} alt={`star ${status}`} />
+          <img
+            key={index}
+            src={`/star-${status}.svg`}
+            alt={`star ${status}`}
+            className={styles.star}
+          />
         ))}
       </div>
     );

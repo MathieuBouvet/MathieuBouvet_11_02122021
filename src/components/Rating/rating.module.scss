@@ -1,4 +1,11 @@
+@use "../../mixins.scss";
+
 .rating {
   display: flex;
   gap: 20px;
+}
+
+.star {
+  width: 30px;
+  height: 30px;
 }

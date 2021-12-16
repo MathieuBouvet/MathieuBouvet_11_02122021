@@ -2,7 +2,7 @@ import React from "react";
 
 import cx from "../../utils/cx";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import styles from "./header.module.scss";
 
@@ -11,7 +11,7 @@ class Header extends React.Component {
     return (
       <header className={styles.header}>
         <h1>
-          <img src="/logo-full.svg" alt="kasa" />
+          <Link to="/"><img src="/logo-full.svg" alt="kasa" /></Link>
         </h1>
         <nav>
           <ul className={styles.navigationMenu}>

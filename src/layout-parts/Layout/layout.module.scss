@@ -1,5 +1,14 @@
 .layout {
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
   max-width: 1290px;
   padding: 0 25px;
+  margin-bottom: 33px;
 }
