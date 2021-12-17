@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Navigate } from "react-router-dom";
 
 import withRouteParams from "../../utils/withRouteParam";
-import withNavigate from "../../utils/withNavigate";
 
 import { getAccomodationById } from "../../dataLayer";
 
@@ -17,7 +17,7 @@ class Accomodation extends React.Component {
   render() {
     const accomodation = getAccomodationById(this.props.params.id);
     if (accomodation == null) {
-      return null;
+      return <Navigate to="/404" />;
     }
     return (
       <>
@@ -64,13 +64,6 @@ class Accomodation extends React.Component {
       </>
     );
   }
-
-  componentDidMount() {
-    const accomodation = getAccomodationById(this.props.params.id);
-    if (accomodation == null) {
-      setTimeout(() => this.props.navigate("/404", { replace: true }));
-    }
-  }
 }
 
 Accomodation.propTypes = {
@@ -78,4 +71,4 @@ Accomodation.propTypes = {
   navigate: PropTypes.func.isRequired,
 };
 
-export default withNavigate(withRouteParams(Accomodation));
+export default withRouteParams(Accomodation);
